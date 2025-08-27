@@ -354,8 +354,37 @@ address {
 
 /* Procedures section */
 
+.procedures-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.procedures-slider {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .carousel-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  fill: var(--color-primary-dark);
+  height: 44px;
+  width: 44px;
   padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: var(--color-primary-light);
+  fill: var(--color-primary);
 }
 
 .carousel-button.forward {
@@ -366,7 +395,9 @@ address {
   display: flex;
   justify-content: center;
   gap: 16px;
+  padding-inline-start: 0;
   padding-block-end: 32px;
+  margin: 0;
 }
 
 .procedures-item {
@@ -414,6 +445,7 @@ address {
 .procedures-title {
   text-align: center;
   margin-block-end: 48px;
+  justify-self: center;
 }
 
 .procedures-card-title {
@@ -509,10 +541,22 @@ address {
 /* Footer */
 
 /* .footer {
+  
+} */
+
+.footer-container::after {
+  position: absolute;
+  background-image: url('../images/jar\ with\ a\ pipette.png');
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 150px;
+  bottom: 0;
+  right: 0;
+  content: '';
 }
- */
 
 .footer-container {
+  position: relative;
   padding: 56px 100px;
   display: flex;
   justify-content: space-between;
